@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="calcalorie.js"></script> <!-- Inclure le fichier JS -->
+    <link rel="stylesheet" href="stylecalorie.css">
+    <title>Calcul et choix de calories</title>
+  </head>
+  <body>
+    <h1> Tableau des calories</h1> <!-- Titre -->
+    <!-- Menu déroulant pour choisir un aliment -->
+    <label for="aliment-select">Choisissez un aliment :</label>
+    <select id="aliment-select">
+      <option value="">Faites votre choix</option>
+      <option value="chorba">Chorba (70 Kcal pour 100g)</option>
+      <option value="brick-thon">Brick Thon (200 Kcal pour 100g)</option>
+      <option value="viande-hachee">Viande Hachée (100 Kcal pour 100g)</option>
+      <option value="poulet">Aiguillette Poulet (100 Kcal pour 100g)</option>
+      <option value="pomme de terre">PDT au four (90 Kcal pour 100g)</option>
+      <option value="cake aux fruits">Cake aux Fruits (320 Kcal pour 100g)</option>
+      <option value="kal el louz">Kalb el Louz (400 Kcal pour 100g)</option>
+    </select>
+    <br><br>
+    <button onclick="supprimerIngredients()">Vider liste ingrédients</button><!-- boutons pour effacer la liste des ingrédients -->
+    <button onclick="ajouterIngredient()">Ajouter</button><!-- boutons pour ajouter des ingrédients -->
+    <p id="affichage"></p><!-- Afficher la liste des ingrédients et leur nombre de calories -->
+    <br><br>
+    <hr>
+    <p id="total-calories"></p><!-- Afficher le nombre total de calories des ingrédients -->
+    <br><br>
+    <button id="totalCaloriesButton">Total calories</button> <!-- Bouton pour calculer le nombre total de calories et afficher une alerte -->
+    <script>
+      var totalCaloriesButton = document.getElementById("totalCaloriesButton");// Récupérer le bouton pour calculer le nombre total de calories
+      totalCaloriesButton.addEventListener("click", function() { // Ajouter un événement "click" au bouton pour calculer le nombre total de calories et afficher une alerte
+        var totalCalories = calculerTotalCalories(); // Calculer le nombre total de calories
+        if (totalCalories < 2500) { // Si le total de calories est inférieur à 2500
+          alert("Vous êtes en dessous de l'apport Kcal par jour !"); // Afficher cette alerte
+        } else if (totalCalories > 3000) { // Si le total de calories est supérieur à 3000
+          alert("Pour compenser cet écart! 3h a la salle !"); // Afficher cette alerte
+        } else if (totalCalories == 2500) { // Si le total de calories est égal à 2500
+          alert("Bravo ! vous êtes dans la moyenne Kcal par jour!"); // Afficher cette alerte
+        }
+        afficherTotalCalories(); // Afficher le nombre total de calories dans la page HTML
+      });
+    </script>
+  </body>
+</html>
+
+
+ 
+
+
+
+
+

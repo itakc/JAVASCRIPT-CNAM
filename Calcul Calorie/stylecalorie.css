@@ -1,0 +1,67 @@
+/* Définition des styles pour la page de calcul des calories */
+
+/* Couleurs */
+
+/* Définition de la couleur de fond, de la couleur de texte et de la police pour le corps de la page */
+body {
+    background-color: #f7f7f7; /* Définit la couleur de fond du corps de la page en gris TRES clair */
+    color: #333; /* Définit la couleur de texte en noir-gris foncé */
+    font-family: Arial, sans-serif; /* Définit la police de caractères du texte */
+  }
+  
+  /* Définition de la couleur, de la taille de police, de l'alignement et de la marge supérieure pour le titre de la page */
+  h1 {
+    color: #f53d5b;  /* Définit la couleur du texte de l'en-tête en rouge  */
+    font-size: 2.5em;  /* Définit la taille de police de l'en-tête à 2,5 em (correspondant à environ 40 pixels) */
+    text-align: center;  /* Centre l'en-tête horizontalement dans la page */
+    margin-top: 0;  /* Supprime toute marge supérieure (par défaut, les navigateurs ajoutent une petite marge au-dessus de l'en-tête) */
+  }
+  
+  /* Définition de la taille de police, du rembourrage et du rayon de bordure pour les menus déroulants et les boutons */
+  select, button {
+    font-size: 1.2em;  /* Définit la taille de police des menus déroulants et des boutons à 1,2 em (correspondant à environ 19 pixels) */
+    padding: 0.5em;  /* Ajoute un espace intérieur de 0,5 em (correspondant à environ 8 pixels) autour des menus déroulants et des boutons */
+    border-radius: 5px;  /* Arrondit les bords des menus déroulants et des boutons avec un rayon de 5 pixels */
+  }
+  
+  /* Définition de la marge inférieure pour les menus déroulants */
+  select {
+    margin-bottom: 1em; /* Ajoute une marge en bas de 1em (correspondant à environ 16 pixels) au menu déroulant */
+  }
+  
+  /* Mise en forme de la liste des ingrédients */
+  
+  /* Définition de la taille de police et de la hauteur de ligne pour la liste des ingrédients */
+  #affichage {
+    font-size: 1.2em;  /* Définit la taille de police de l'élément avec l'ID "affichage" à 1,2 em (correspondant à environ 19 pixels) */
+    line-height: 1.5em;  /* Définit la hauteur de ligne de l'élément avec l'ID "affichage" à 1,5 em (correspondant à environ 24 pixels) */
+  }
+  
+  /* Définition de la marge inférieure pour chaque élément de la liste des ingrédients */
+  #affichage li {
+    margin-bottom: 0.5em;  /* Ajoute une marge inférieure de 0,5 em (correspondant à environ 8 pixels) aux éléments de liste à l'intérieur de l'élément avec l'ID "affichage" */
+  }
+  
+  /* Définition de la marge droite pour le texte en gras de chaque élément de la liste des ingrédients */
+  #affichage strong {
+    margin-right: 0.5em;  /* Ajoute une marge droite de 0,5 em (correspondant à environ 8 pixels) aux éléments avec la balise <strong> à l'intérieur de l'élément avec l'ID "affichage" */
+  }
+  
+  /* Mise en forme du bouton pour calculer le total des calories */
+  
+  /* Définition de la couleur de fond, de la couleur de texte, de la bordure, du rembourrage, du rayon de bordure et du curseur pour le bouton de calcul des calories */
+  #totalCaloriesButton {
+    background-color: #f53d5b; /* Définit la couleur de fond du bouton à un rouge foncé */
+    color: #fff; /* Définit la couleur de texte à blanc */
+    border: none; /* Supprime la bordure du bouton */
+    padding: 0.5em 1em; /* Ajoute un espace intérieur de 0,5 em (correspondant à environ 8 pixels) en haut/bas et de 1 em (correspondant à environ 16 pixels) à gauche/droite */
+    border-radius: 5px; /* Arrondit les bords du bouton avec un rayon de 5 pixels */
+    cursor: pointer; /* Définit le curseur de la souris comme un pointeur */
+  }
+  
+  /* Définition de la couleur de fond, de la couleur de texte et de la bordure pour le bouton de calcul des calories lorsqu'il est survolé */
+  #totalCaloriesButton:hover {
+    background-color: #fff; /* Définit la couleur de fond du bouton lorsqu'il est survolé par la souris à blanc */
+    color: #f53d5b; /* Définit la couleur de texte lorsqu'il est survolé par la souris à un rouge foncé */
+    border: 2px solid #f53d5b; /* Ajoute une bordure de 2 pixels avec une couleur rouge foncé lorsqu'il est survolé par la souris */
+  }
